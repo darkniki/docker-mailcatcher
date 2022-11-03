@@ -1,0 +1,10 @@
+version: '3.9'
+
+services:
+  mailcatcher:
+    image: darkniki/mailcatcher:latest
+    build:
+      context: build
+    ports:
+      - "1080:1080"
+      - "1025:1025"
