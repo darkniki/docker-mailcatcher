@@ -1,4 +1,6 @@
 # Mailcatcher docker image
+[![CI](https://github.com/darkniki/docker-mailcatcher/actions/workflows/main.yml/badge.svg)](https://github.com/darkniki/docker-mailcatcher/actions/workflows/main.yml)
+
 unofficial docker image for Mailcatcher
 
 ### Supported architectures
