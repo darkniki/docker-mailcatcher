@@ -1,10 +1,10 @@
-FROM alpine:3.16.2
+FROM alpine:3.23.3
 
-MAINTAINER darkniki <darkniki777@gmail.com>
+LABEL maintainer="darkniki <darkniki777@gmail.com>"
 
-RUN apk add --no-cache --virtual .build-deps build-base sqlite-dev ruby-dev \
-    && apk add --no-cache ruby sqlite-libs libstdc++ ruby-json ruby-etc \
-    && gem install --no-document --platform ruby sqlite3 net-smtp mailcatcher  \
+RUN apk add --no-cache --virtual .build-deps build-base ruby-dev sqlite-dev \
+    && apk add --no-cache ca-certificates libstdc++ ruby sqlite-libs \
+    && gem install --no-document --platform ruby mailcatcher -v 0.10.0 \
     && apk del .build-deps
 
 EXPOSE 1025 1080
